@@ -216,25 +216,25 @@
 
 /* Small screens / mobile */
 @media (max-width: 768px) {
-    .nav-var {
-        flex-direction: column;
-        padding: 1rem;
+    .hamburger {
+        display: block;
     }
-    
-    .nav-var-content {
-        margin-bottom: 1rem;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
+
     .nav-var-menu {
+        display: none;
         width: 100%;
-        overflow-x: visible;
-        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(44, 62, 80, 0.95);
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        padding: 1rem 0;
     }
-    
+
+    .nav-var-menu.active {
+        display: flex;
+    }
+
     .nav-var-lists {
         flex-direction: column;
         width: 100%;
@@ -257,7 +257,8 @@
         visibility: visible;
         transform: none;
         box-shadow: none;
-        background-image: linear-gradient(to right, #4E4376, #2C3E50);
+        background-image: none;
+        background-color: rgba(0,0,0,0.2);
         width: 100%;
         min-width: unset;
         max-height: 0;
@@ -524,4 +525,13 @@
  .strategic-objectives-container:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
 }

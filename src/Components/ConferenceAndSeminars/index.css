@@ -72,3 +72,30 @@
     text-align: justify;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .conference-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .conference-heading {
+        font-size: 2rem;
+    }
+
+    .conference-seminar-nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conference-seminar-nav-logo {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .conference-seminar-nav-links {
+        margin-top: 10px;
+    }
+}
+

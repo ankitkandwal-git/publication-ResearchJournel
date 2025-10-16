@@ -1,25 +1,33 @@
-import { Component } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
-class FrontPage extends Component {
-    render(){
-        return(
-            <div className="bg-container">
+const FrontPage = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    return (
+        <div className="bg-container">
             <nav className="nav-var">
                 <div className="nav-var-content">
                     
                     <h1 className="nav-var-logo">Publication</h1>
                 </div>
-                <div className="nav-var-menu">
+                <button className="hamburger" onClick={toggleMenu}>
+                    &#9776; {/* Hamburger Icon */}
+                </button>
+                <div className={`nav-var-menu ${isMenuOpen ? "active" : ""}`}>
                     <ul className="nav-var-lists">
-                        <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+                        <li className="nav-item"><Link to="/" className="nav-link" onClick={toggleMenu}>Home</Link></li>
                         <li className="nav-item">
-                            <Link to="/research-and-journal" className="nav-link">Research and Journal</Link>
+                            <Link to="/research-and-journal" className="nav-link" onClick={toggleMenu}>Research and Journal</Link>
                         </li>
-                        <li className="nav-item"><Link to="/membership" className="nav-link">Membership</Link></li>
-                        <li className="nav-item"><a href="#" className="nav-link">Publication Archive</a></li>
-                        <li className="nav-item"><Link to="/conference-and-seminars" className="nav-link">Conference and Seminars</Link></li>
+                        <li className="nav-item"><Link to="/membership" className="nav-link" onClick={toggleMenu}>Membership</Link></li>
+                        <li className="nav-item"><a href="#" className="nav-link" onClick={toggleMenu}>Publication Archive</a></li>
+                        <li className="nav-item"><Link to="/conference-and-seminars" className="nav-link" onClick={toggleMenu}>Conference and Seminars</Link></li>
                     </ul>
                 </div>
             </nav>
@@ -119,8 +127,7 @@ class FrontPage extends Component {
             </div>
 
         </div>
-        )
-    }
+    );
 }
 
 export default FrontPage;
