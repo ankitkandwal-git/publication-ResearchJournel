@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import FrontPage from './Components/FrontPage';
+import Membership from './Components/Membership';
+import ConferenceAndSeminars from './Components/ConferenceAndSeminars';
+import ResearchAndJournal from './Components/ResearchAndJournal';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<FrontPage />} />
+      <Route path="/membership" element={<Membership />} />
+      <Route path="/conference-and-seminars" element={<ConferenceAndSeminars />} />
+      <Route path="/research-and-journal" element={<ResearchAndJournal />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
