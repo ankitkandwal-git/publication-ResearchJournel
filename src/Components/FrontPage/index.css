@@ -217,26 +217,29 @@
 /* Small screens / mobile */
 @media (max-width: 768px) {
     .nav-var {
-        flex-wrap: nowrap; /* Keep logo and hamburger on one line */
+        flex-wrap: nowrap;
+        position: relative;
     }
 
     .hamburger {
-        display: block; /* Show the hamburger icon */
+        display: block;
+        z-index: 1001;
     }
 
     .nav-var-menu {
-        display: none; /* Hide the desktop menu by default */
+        display: none;
         position: absolute;
-        top: 100%; /* Position it right below the navbar */
+        top: 100%;
         left: 0;
         right: 0;
         background-color: #2c3e50;
         box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-        z-index: 1100; /* Ensure it's on top */
+        z-index: 1100;
+        width: 100%;
     }
 
     .nav-var-menu.active {
-        display: flex; /* Show the menu when active */
+        display: block;
     }
 
     .nav-var-lists {
@@ -271,10 +274,13 @@
         margin-top: 0;
         padding: 0;
         border: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
     }
     
     .dropdown:hover .dropdown-menu {
-        max-height: 200px; /* Expand dropdown on hover */
+        max-height: 200px;
     }
     
     .dropdown-link {

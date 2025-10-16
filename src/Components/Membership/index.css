@@ -49,12 +49,9 @@
 
 .membership-main-content {
     display: flex;
+    flex-direction: row; /* Keep row layout for desktop */
     flex-grow: 1;
     background-color: #f4f7f6;
-}
-
-.membership-main-content {
-    flex-direction: column;
 }
 
 .membership-sidebar {
@@ -92,11 +89,6 @@
     font-weight: bold;
 }
 
-.membership-sidebar li.active {
-    border-left: none;
-    border-bottom: 2px solid #007bff;
-}
-
 .membership-content-display {
     flex-grow: 1;
     padding: 3rem;
@@ -113,20 +105,26 @@
     padding-bottom: 0.5rem;
 }
 
-.membership-content-display h2 {
-    font-size: 1.8rem;
-}
-
 .membership-content-display p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #666;
+    white-space: pre-wrap;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .membership-navbar {
+        padding: 15px 20px;
+        flex-direction: row; /* Keep navbar in a single row */
+    }
+
+    .membership-navbar-heading {
+        font-size: 1.5rem;
+    }
+
     .membership-main-content {
-        flex-direction: column;
+        flex-direction: column; /* Stack vertically only on mobile */
     }
 
     .membership-sidebar {
@@ -154,14 +152,6 @@
 
     .membership-content-display h2 {
         font-size: 1.8rem;
-    }
-
-    .membership-navbar {
-        padding: 15px 20px;
-    }
-
-    .membership-navbar-heading {
-        font-size: 1.5rem;
     }
 }
 
