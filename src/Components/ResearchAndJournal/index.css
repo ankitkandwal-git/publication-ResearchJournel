@@ -48,7 +48,7 @@
 
 .research-journal-main-content {
     display: flex;
-    flex-direction: row; /* Default to row for desktop */
+    flex-direction: row; 
     flex-grow: 1;
 }
 

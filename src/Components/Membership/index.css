@@ -116,7 +116,7 @@
 @media (max-width: 768px) {
     .membership-navbar {
         padding: 15px 20px;
-        flex-direction: row; /* Keep navbar in a single row */
+        flex-direction: row; 
     }
 
     .membership-navbar-heading {
@@ -124,7 +124,7 @@
     }
 
     .membership-main-content {
-        flex-direction: column; /* Stack vertically only on mobile */
+        flex-direction: column; 
     }
 
     .membership-sidebar {

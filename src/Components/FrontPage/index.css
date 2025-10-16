@@ -1,5 +1,5 @@
 .bg-container {
-    background-color: #f8f9fa; /* A light gray fallback */
+    background-color: #f8f9fa; 
     background-image: linear-gradient(to top, #e9ecef 0%, #f8f9fa 100%);
     min-height : 100vh;
     background-size: cover;
@@ -105,15 +105,15 @@
 /* Dropdown styles */
 .dropdown {
     position: relative;
-    z-index: 1200; /* Higher z-index to ensure dropdowns appear above other elements */
+    z-index: 1200; 
 }
 
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    right: 0; /* Changed from left: 0 to right: 0 for right alignment */
+    right: 0; 
     background-image: linear-gradient(to bottom, #4E4376, #2C3E50);
-    min-width: 220px; /* Increased width to accommodate longer text */
+    min-width: 220px; 
     border-radius: 4px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     padding: 0.5rem 0;
@@ -122,10 +122,10 @@
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-    z-index: 1300; /* Increased z-index to ensure visibility */
+    z-index: 1300; 
     list-style: none;
     border: 1px solid rgba(255, 126, 95, 0.2);
-    pointer-events: auto; /* Ensure dropdown can receive mouse events */
+    pointer-events: auto; 
 }
 
 .dropdown:hover .dropdown-menu {
@@ -447,12 +447,12 @@
 }
 .About-society-container {
     background-color: #ffffff;
-    padding: 2.5rem; /* Increased padding for more whitespace */
-    border-radius: 12px; /* Slightly larger radius for a softer look */
-    border: 1px solid #dee2e6; /* Subtle border for definition */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); /* Deeper, softer shadow */
-    transition: all 0.3s ease-in-out; /* Smoother transition */
-    margin-top: 3rem; /* Added margin for spacing */
+    padding: 2.5rem; 
+    border-radius: 12px; 
+    border: 1px solid #dee2e6; 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); 
+    transition: all 0.3s ease-in-out; 
+    margin-top: 3rem; 
 }
 .About-society-container:hover,
 .mission-container:hover,
@@ -536,6 +536,14 @@
     background: none;
     border: none;
     color: white;
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block !important;
+    }
 }
