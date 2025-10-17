@@ -7,14 +7,37 @@ const researchInfo = [
         id: 1,
         title: 'About the Journal',
         content: (
-            <>
-                <p>SPACE Journal of Innovative Research and Review is a quarterly journal designed to ensure that peer-reviewed articles in all disciplines are published quickly. The research papers published in the Journal are freely available on the website.</p>
-                <p>The editors pre-review each submission before sending it to a blind peer reviewer, if necessary. Before being published, it is assured that the research must be original, neither simultaneously nor previously published elsewhere, and they must pass a critical review process.</p>
-                <p>Submissions of Research Papers to the SPACE Journal undergo peer review; after passing through an initial review, the manuscripts are sent to a technical reviewer.</p>
-                <h3>Frequency</h3>
-                <p>Quarterly [Four (04) issues are published in a year]</p>
-                <p>First Issue in April, Second in July, Third in October and Fourth in January of the Calendar Year.</p>
-            </>
+            <div className="info-table">
+                <div className="info-header-row">
+                    <div className="info-header">About Journal</div>
+                    <div className="info-header">Details of Journal</div>
+                </div>
+                <div className="info-content-row">
+                    <div className="info-column">
+                        <ul className="about-journal-list">
+                            <li>SPACE Journal of Innovative Research and Review is quarterly journal designed to ensure that peer-reviewed articles in all disciplines be published quickly. The Research papers published in Journal are freely available on the web site.</li>
+                            <li>The editors pre-review each submission before sending it to a blind peer reviewer, if necessary. Before being published, it is assured that the research must be original, neither simultaneously nor previously published elsewhere, and they must pass a critical review process. Submissions of Research Paper to the SPACE Journal undergo peer review; after passing through an initial review.</li>
+                            <li>Through this rigorous yet supportive approach, the SPACE Journal of Innovative Research and Review plays a vital role in advancing knowledge, encouraging scholarly collaboration, and contributing to the global research community.</li>
+                            <li>This critical review process ensures that only well-researched, methodologically sound, and innovative studies are published, thereby maintaining the journal's reputation for academic excellence.</li>
+                        </ul>
+                    </div>
+                    <div className="info-column">
+                        <ul className="about-journal-list">
+                            <li><strong>Language of Publication:</strong> English</li>
+                            <li><strong>Year of Starting:</strong> 2025</li>
+                            <li><strong>Format of Journal:</strong> Online</li>
+                            <li><strong>Subjects:</strong> Multidisciplinary</li>
+                            <li><strong>Periodicity of the Journal:</strong> Quarterly (January, April, July and October)</li>
+                            <li><strong>Publication Fee:</strong> No Publication Fee</li>
+                            <li><strong>Paper submission:</strong> Submit your Manuscript at: <a href="mailto:editorspacejournal@gmail.com">editorspacejournal@gmail.com</a></li>
+                            <li><strong>Publisher:</strong> Mr. Rinku (Society for Promoting Academic Collaboration and Engagement)</li>
+                            <li><strong>Editor-in-Chief:</strong> Prof. (Dr.) Niranjan Singh Rathee</li>
+                            <li><strong>Last Date for paper Submission:</strong> 31st March for April issue, 30th June for July issue, 30th September for October issue and 31st December for January issue.</li>
+                            <li><strong>Editorial Offices and Subscription Services:</strong> Rinku, H.No 216, Gijii, Tehsil Sampla, District Rohtak, Haryana 124501</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         )
     },
     {

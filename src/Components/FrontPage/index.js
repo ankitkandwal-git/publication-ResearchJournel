@@ -26,7 +26,7 @@ const FrontPage = () => {
                             <Link to="/research-and-journal" className="nav-link" onClick={toggleMenu}>Research and Journal</Link>
                         </li>
                         <li className="nav-item"><Link to="/membership" className="nav-link" onClick={toggleMenu}>Membership</Link></li>
-                        <li className="nav-item"><a href="#" className="nav-link" onClick={toggleMenu}>Publication Archive</a></li>
+                        <li className="nav-item"><Link to="/certification" className="nav-link" onClick={toggleMenu}>Certification</Link></li>
                         <li className="nav-item"><Link to="/conference-and-seminars" className="nav-link" onClick={toggleMenu}>Conference and Seminars</Link></li>
                     </ul>
                 </div>
